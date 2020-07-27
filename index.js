@@ -22,4 +22,4 @@ features
   .slice(0, k)
   .reduce((acc, pair) => {
     return acc + pair.get(1);
-  }, 0);
+  }, 0) / k;
