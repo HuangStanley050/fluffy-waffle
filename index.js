@@ -15,4 +15,6 @@ features
   .sum(1)
   .pow(0.5)
   .expandDims(1)
-  .concat(labels, 1);
+  .concat(labels, 1)
+  .unstack()
+  .sort((a, b) => (a.get(0) > b.get(0) ? 1 : -1));
